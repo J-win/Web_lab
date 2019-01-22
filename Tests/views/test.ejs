@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Тест</title>
+</head>
+<body>
+  <form method="post" action="/result">
+  <ol>
+    <% var k = 0; %>
+    <% for (var i = 0; i < l1; i++) { %>
+      <li> <%= qw[i].question %> </li>
+      <ul>
+        <% for (var j = 0; j < l2[i]; j++) { %>
+          <li> <input type = "checkbox" name="check" value= <%= qw[i].answers[j].answer %> > <%= qw[i].answers[j].answer %> </li>
+        <% } %>
+      </ul>
+    <% } %>
+  </ol>
+  <button type="submit" name="b" value="2">Отправить</button>
+  </form>
+</body>
+</html>
